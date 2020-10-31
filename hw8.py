@@ -40,8 +40,8 @@ b.guess_who_am_i()
 from random import randrange
 a = randrange(5)
 b = randrange(5)
-
-user_input = int(input("INTEGER DIVISIONS\n"))
+print("INTEGER DIVISIONS")
+user_input = int(input(a/b))
 try:
 	c=a/b
 	if((user_input)==c):
