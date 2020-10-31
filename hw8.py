@@ -34,47 +34,19 @@ b.guess_who_am_i()
 
 
 
+
 ##2. 
 
 from random import randrange
 a = randrange(5)
+b = randrange(5)
 
-def get_user_input():
-    user_input = int(input("INTEGER DIVISIONS\n"))
-    while user_input > 5 or user_input <= 0:
-        print("Invalid menu option.")
-        user_input = int(input("Please try again: "))
-    else:
-        return user_input
-
-
-def get_user_solution(problem):
-    print("Enter your answer")
-    print(problem, end="")
-    result = int(input(" = "))
-    return result
-
-
-def check_solution(user_solution, solution, count):
-    if user_solution == solution:
-        count = count + 1
-        print("Correct.")
-        return count
-    else:
-        print("Incorrect.")
-        return count
-
-def main():
-    
-    option = get_user_input()
-    total = 0
-    correct = 0
-    while option != 5:
-        total = total + 1
-        correct = menu_option(option, correct)
-        option = get_user_input()
-
-    display_separator()
-    display_result(total, correct)
-
-main()
+user_input = int(input("INTEGER DIVISIONS\n"))
+try:
+	c=a/b
+	if((user_input)==c):
+		print("CORRECT!")
+	else:
+		print("INCORRECT!")
+except:
+	print("Please enter an integers Only!")
