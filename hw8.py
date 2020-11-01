@@ -38,15 +38,28 @@ b.guess_who_am_i()
 ##2. 
 
 from random import randrange
-a = randrange(5)
-b = randrange(5)
+
 print("INTEGER DIVISIONS")
-user_input = int(input(a/b))
-try:
-	c=a/b
-	if((user_input)==c):
-		print("CORRECT!")
-	else:
-		print("INCORRECT!")
-except:
-	print("Please enter an integers Only!")
+
+while True:
+    a = randrange(5)
+    b = randrange(5)
+
+    #user_input = int(input(a/b))
+
+    try:
+        print(str(a)+"/"+str(b)+"=")
+
+        c=int(input())
+
+        if(c==a//b):
+            print("CORRECT!")
+
+        else:
+            print("INCORRECT!")                 
+
+    except ValueError:
+        print("Please enter an integers Only!")
+
+    except:
+        print("There are errors in program , Please reenter")
